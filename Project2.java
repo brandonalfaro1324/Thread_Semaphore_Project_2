@@ -226,6 +226,8 @@ public class Project2{
                 ////////////////////////////////////////////////////
                 // Wait for doctor to arrive
                 DOCTOR_ARRIVES_ROOM[this.doctors_room_num].acquire();
+                System.out.printf("Patient %d enters doctor %d's office. %n", this.patient_id, this.doctors_room_num);
+
 
                 // Let doctor know about problem
                 PATIENT_TALKS_DOCOTR[this.doctors_room_num].release();
@@ -340,6 +342,8 @@ public class Project2{
                     GET_AND_SEND_PATIENT[this.collect_patient_id].acquire();
 
 					System.out.printf("Nurse %d takes patient %d to doctor's office. %n", this.nurse_id, this.collect_patient_id);
+					//System.out.printf("Patient %d enters doctor %d's office. %n", this.collect_patient_id, this.nurse_id);
+
                     ////////////////////////////////////////////////////
 
 
